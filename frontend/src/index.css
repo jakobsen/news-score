@@ -18,3 +18,9 @@ body {
 #root {
     isolation: isolate;
 }
+
+/* Design tokens */
+:root {
+    --primary: #7424da;
+    --secondary: #faf6ff;
+}
