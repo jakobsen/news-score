@@ -1,3 +1,5 @@
+import "./Button.css";
+
 interface Props
   extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
   variant?: "primary" | "secondary";

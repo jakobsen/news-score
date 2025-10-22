@@ -24,7 +24,9 @@ function App() {
         />
         <div className="actions">
           <Button>Calculate NEWS score</Button>
-          <Button type="reset">Reset form</Button>
+          <Button type="reset" variant="secondary">
+            Reset form
+          </Button>
         </div>
       </form>
     </main>
