@@ -23,4 +23,6 @@ body {
 :root {
     --primary: #7424da;
     --secondary: #faf6ff;
+
+    --font-family: "Inter Variable", sans-serif;
 }

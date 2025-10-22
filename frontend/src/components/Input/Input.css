@@ -27,4 +27,5 @@ input {
     background-color: var(--secondary);
     border: 1px solid color-mix(in srgb, var(--primary) 5%, transparent);
     outline-color: var(--primary);
+    font-family: var(--font-family);
 }

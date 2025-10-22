@@ -1,6 +1,7 @@
 main {
     max-width: 440px;
     margin: 99px auto 0;
+    font-family: var(--font-family);
 }
 
 h1 {
