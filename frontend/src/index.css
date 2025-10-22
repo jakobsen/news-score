@@ -1,0 +1,20 @@
+/* CSS Reset rules adapted from https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+}
+
+#root {
+    isolation: isolate;
+}
