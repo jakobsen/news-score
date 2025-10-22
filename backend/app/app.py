@@ -1,5 +1,7 @@
 from litestar import Litestar, post
 from litestar.plugins.structlog import StructlogPlugin
+from litestar.config.cors import CORSConfig
+
 
 from . import news
 from .models import MeasurementsList, Result
@@ -11,4 +13,9 @@ async def calculate_score(data: MeasurementsList) -> Result:
     return Result(score=score)
 
 
-app = Litestar(route_handlers=[calculate_score], plugins=[StructlogPlugin()])
+cors_config = CORSConfig(allow_origins=["*"])
+app = Litestar(
+    route_handlers=[calculate_score],
+    plugins=[StructlogPlugin()],
+    cors_config=cors_config,
+)
