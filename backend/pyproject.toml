@@ -5,7 +5,7 @@ description = "The backend powering the NEWS score calculator"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "litestar[pydantic,standard]>=2.18.0",
+    "litestar[pydantic,standard,structlog]>=2.18.0",
 ]
 
 [dependency-groups]
