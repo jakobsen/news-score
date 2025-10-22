@@ -13,6 +13,7 @@
 body {
     -webkit-font-smoothing: antialiased;
     min-height: 100dvh;
+    padding: 99px 16px 0;
 }
 
 #root {
