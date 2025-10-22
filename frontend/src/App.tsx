@@ -2,14 +2,22 @@ import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
+import { calculateScore } from "./api/news";
 
 function App() {
   const [temperature, setTemperature] = useState("");
   const [heartRate, setHeartRate] = useState("");
   const [respiratoryRate, setRespiratoryRate] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const measurements = {
+      temperature: Number(temperature),
+      heartRate: Number(heartRate),
+      respiratoryRate: Number(respiratoryRate),
+    };
+    const result = await calculateScore(measurements);
+    console.log({ result });
   };
 
   const handleReset = () => {
