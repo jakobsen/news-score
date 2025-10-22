@@ -3,11 +3,13 @@ import "./App.css";
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { calculateScore } from "./api/news";
+import { Card } from "./components/Card";
 
 function App() {
   const [temperature, setTemperature] = useState("");
   const [heartRate, setHeartRate] = useState("");
   const [respiratoryRate, setRespiratoryRate] = useState("");
+  const [score, setScore] = useState<number | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,13 +19,14 @@ function App() {
       respiratoryRate: Number(respiratoryRate),
     };
     const result = await calculateScore(measurements);
-    console.log({ result });
+    setScore(result.score);
   };
 
   const handleReset = () => {
     setTemperature("");
     setHeartRate("");
     setRespiratoryRate("");
+    setScore(null);
   };
 
   return (
@@ -64,6 +67,11 @@ function App() {
           </Button>
         </div>
       </form>
+      {score !== null && (
+        <Card>
+          News score: <span style={{ fontWeight: 600 }}>{score}</span>
+        </Card>
+      )}
     </main>
   );
 }
