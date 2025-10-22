@@ -1,0 +1,19 @@
+main {
+    max-width: 440px;
+    margin: 99px auto 0;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.actions {
+    display: flex;
+    gap: 24px;
+}
