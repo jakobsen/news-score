@@ -17,7 +17,7 @@ class TemperatureMeasurement(BaseModel):
 
 class HeartRateMeasurement(BaseModel):
     type: Literal[MeasurementType.HEART_RATE] = MeasurementType.HEART_RATE
-    value: conint(gt=24, le=220)
+    value: conint(gt=25, le=220)
 
 
 class RespiratoryRateMeasurement(BaseModel):
