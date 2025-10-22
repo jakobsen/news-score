@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from app.app import (
+from app.models import (
     HeartRateMeasurement,
     MeasurementsList,
     RespiratoryRateMeasurement,
