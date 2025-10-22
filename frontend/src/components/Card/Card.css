@@ -1,0 +1,8 @@
+.card {
+    padding: 16px;
+    color: black;
+    background-color: var(--secondary);
+    border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+    font-weight: 1.25rem;
+    border-radius: 10px;
+}
