@@ -8,6 +8,10 @@ main {
     gap: 40px;
 }
 
+h1 {
+    font-size: 1.25rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
